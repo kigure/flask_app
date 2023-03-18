@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <h1>サプー書店</h1>
+  <form method="post" action="{{ url_for('register') }}">
+  <table border="8" style="background-color: bisque;">
+    <tr>
+      <th>タイトル</th>
+      <th>金額</th>
+      <th>入荷日</th>
+    </tr>
+    <tr>
+      <td><input type="text" name="arrival_day"></td>
+      <td><input type="text" name="title"></td>
+      <td><input type="text" name="price"></td>
+    </tr>
+  </table>
+  <br />
+  <input type="submit" value="登録">
+</form>
+  <a href="{{ url_for('index') }}"><button type="button" class="btn btn-success m-lg-5">トップへ</button></a>
+</body>
+</html>
